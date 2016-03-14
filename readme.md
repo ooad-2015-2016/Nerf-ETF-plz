@@ -7,15 +7,15 @@
 ##Opis teme
 
 Korist softvera je olakšavanje rada zaposlenicima firme i bolje poslovanje pošte. Cilj softvera je automatizacija
-odredenih procesa i ekonomizacija resursa firme (barem jedan radnik manje). Sistem pruža centralizovano upravljanje resursima,
+odredenih procesa i ekonomizacija resursa firme(barem jedan radnik manje). Sistem pruža centralizovano upravljanje resursima,
 mobilnost i fleksibilnost pri radu, koji je ujedno jednostavan i intuitivan za upotrebu. Pruža uniforman nacin upravljanjem i uredivanjem administrativnih poslova.
 
 ##Opis procesa
 
-Klijent daje pošiljke blagajniku koje ih unosi u sistem. Pošiljke se, u zavisnosti od adresa, sortiraju po rejonima. Poslovoda ce imati informacije 
-o prvim zadnjim rokovima dostave, i bira dostavljace koje ce isporuke izvršavati na osnovu rejona. Dostavljaci imaju mobilnu aplikaciju u kojoj
-oznacava koje su pošiljke isporucene, te u slucaju neuspjele dostave navode razlog neizvršene dostave. Nakon toga dostavljaci podnose izvještaje o dostavljenim
-pošiljkama i te informacije se pohranjuju u odgovarajuce spremište. Pošiljke koje nisu dostavljene se ponovno vracaju u sistem, te njima daje prioritet dostave.
+Klijent daje pošiljke blagajniku koje ih unosi u sistem. Pošiljke se, u zavisnosti od adresa, sortiraju po rejonima. Poslovoða æe imati informacije 
+o prvim zadnjim rokovima dostave i bira dostavljace koje ce isporuke izvršavati na osnovu rejona. Dostavljaèi imaju mobilnu aplikaciju u kojoj
+oznacavaju koje su pošiljke isporucene, te u slucaju neuspjele dostave navode razlog neizvršene dostave. Nakon toga dostavljaèi podnose izvještaje o dostavljenim
+pošiljkama i te informacije se pohranjuju u odgovarajuæe spremište. Pošiljke koje nisu dostavljene se ponovno vracaju u sistem, te njima daje prioritet dostave.
 
 ##Funkcionalnosti i Akteri
 
