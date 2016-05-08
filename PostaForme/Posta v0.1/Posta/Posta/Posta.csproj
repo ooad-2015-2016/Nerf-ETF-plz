@@ -116,8 +116,23 @@
     <Compile Include="PostaKlase\Osobe\Zaposlenici\Poslovodja.cs" />
     <Compile Include="PostaKlase\Osobe\Zaposlenici\Postar.cs" />
     <Compile Include="PostaKlase\Osobe\Musterije\Primalac.cs" />
+    <Compile Include="PostaViews\BlagajnikView\BlagajnikLetci.xaml.cs">
+      <DependentUpon>BlagajnikLetci.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PostaViews\BlagajnikView\BlagajnikPaket.xaml.cs">
+      <DependentUpon>BlagajnikPaket.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PostaViews\BlagajnikView\BlagajnikPismo.xaml.cs">
+      <DependentUpon>BlagajnikPismo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PostaViews\BlagajnikView\BlagajnikPocetna.xaml.cs">
+      <DependentUpon>BlagajnikPocetna.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PostaViews\KurirViews\KurirLetci.xaml.cs">
       <DependentUpon>KurirLetci.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PostaViews\Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
     <Compile Include="PostaViews\PoslovodjaViews\KreirajDostavu.xaml.cs">
       <DependentUpon>KreirajDostavu.xaml</DependentUpon>
@@ -151,7 +166,6 @@
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
-    <None Include="Posta_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Properties\Default.rd.xml" />
@@ -173,9 +187,29 @@
     <Folder Include="PostaBaza\Views\" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="PostaViews\BlagajnikView\BlagajnikLetci.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PostaViews\BlagajnikView\BlagajnikPaket.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PostaViews\BlagajnikView\BlagajnikPismo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PostaViews\BlagajnikView\BlagajnikPocetna.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="PostaViews\KurirViews\KurirLetci.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PostaViews\Login.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="PostaViews\PoslovodjaViews\KreirajDostavu.xaml">
       <SubType>Designer</SubType>
