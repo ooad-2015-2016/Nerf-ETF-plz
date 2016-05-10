@@ -1,0 +1,32 @@
+﻿<Page
+    x:Class="Posta.PostaViews.BlagajnikView.BlagajnikPaket"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Posta.PostaViews.BlagajnikView"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Height="284" Width="194">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="0,0,10,10">
+        <ComboBox x:Name="cmbAdresa" HorizontalAlignment="Left" Margin="5,44,0,0" VerticalAlignment="Top" Width="157" PlaceholderText="Naziv Ulice">
+            <AutoSuggestBox Width="200"
+                        x:Name="asbAdrese"
+                        PlaceholderText="Unesite polako adresu"
+                        QueryIcon="Find"
+                        Margin="0,0,0,0"
+                        HorizontalAlignment="Left" />
+            <ComboBoxItem Content="aaaaaaadsadsadsadasda" />
+            <ComboBoxItem Content="bbbbbbbbbbbbbbbbb"/>
+            <ComboBoxItem Content="cccccccccccccccc"/>
+
+        </ComboBox>
+
+        <TextBlock x:Name="txtblUnosPisma" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Text="Podaci o paketu" Margin="5,5,0,0" Width="116"/>
+        <TextBox x:Name="txtNazivPrimaoca" HorizontalAlignment="Left" Margin="5,132,0,0" TextWrapping="Wrap" PlaceholderText="Naziv Primaoca" VerticalAlignment="Top" Width="157"/>
+        <Button x:Name="btnNazad" Content="Nazad" HorizontalAlignment="Left" Margin="5,232,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnKraj" Content="Kraj" HorizontalAlignment="Left" Margin="108,232,0,0" VerticalAlignment="Top" Width="54"/>
+        <TextBox x:Name="txtBrojUlice" HorizontalAlignment="Left" Margin="5,88,0,0" TextWrapping="Wrap" PlaceholderText="Broj Ulice" VerticalAlignment="Top" Width="157"/>
+        <TextBox x:Name="txtBrojTelefona" HorizontalAlignment="Left" Margin="5,175,0,0" TextWrapping="Wrap" PlaceholderText="Broj Telefona" VerticalAlignment="Top" Width="157"/>
+
+    </Grid>
+</Page>

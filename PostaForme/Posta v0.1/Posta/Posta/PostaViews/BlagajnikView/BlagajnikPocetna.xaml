@@ -1,0 +1,26 @@
+﻿<Page
+    x:Class="Posta.PostaViews.BlagajnikView.BlagajnikPocetna"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Posta.PostaViews.BlagajnikView"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Width="422.286" Height="414.524">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="2,10,18,10">
+            <TextBlock x:Name="txtblUnos" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Text="Unos Posiljke" Margin="5,5,0,0" Width="101"/>
+            <TextBox x:Name="txtNazivPosiljaoca" HorizontalAlignment="Left" Height="32" TextWrapping="Wrap" PlaceholderText="Naziv Posiljatelja" VerticalAlignment="Top" Width="161" Margin="5,39,-95,-39"/>
+            <TextBox x:Name="txtKontakt" HorizontalAlignment="Left" Height="32" TextWrapping="Wrap" PlaceholderText="Kontakt Telefon" VerticalAlignment="Top" Width="161" Margin="5,119,-95,-119"/>
+            <CalendarDatePicker PlaceholderText="Datum Isporuke" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="161" Margin="5,79,-39,-79"/>
+            <RelativePanel HorizontalAlignment="Left" Height="100" Margin="6,171,-369,-271" VerticalAlignment="Top" Width="363">
+                <TextBlock x:Name="txtTipPosiljke" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Text="Tip Posiljke" Margin="5,5,0,0" Width="101" />
+                <RadioButton x:Name="rbPaket" Content="Paket" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="100" Margin="6,48,0,-48"/>
+                <RadioButton x:Name="rbPismo" Content="Pismo" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="50" Margin="132,48,-132,-48"/>
+                <RadioButton x:Name="rbLetci" Content="Letci" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="70" Margin="258,48,-214,-48"/>
+            </RelativePanel>
+            <Button x:Name="btnIzadji" Content="Izidji" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="64.6666641235352" Margin="10,303,-48.333,-303"/>
+            <Button x:Name="btnOcisti" Content="Ocisti" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="64.6666641235352" Margin="151,303,-205,-303"/>
+            <Button x:Name="btnDalje" Content="Dalje" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="64.6666641235352" Margin="287,303,-352,-303"/>
+     
+    </Grid>
+</Page>
