@@ -1,0 +1,28 @@
+﻿<Page
+    x:Class="Posta.PostaViews.PoslovodjaViews.KreirajDostavu"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Posta.PostaViews.PoslovodjaViews"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBlock x:Name="NaslovTextBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Kreiraj Dostavu" VerticalAlignment="Top"/>
+        <TextBlock x:Name="OdTextBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Od" VerticalAlignment="Top" Margin="30,67,0,0"/>
+        <TextBlock x:Name="DoTextBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Do" VerticalAlignment="Top" Margin="243,67,0,0"/>
+        <CalendarDatePicker HorizontalAlignment="Left" Margin="77,67,0,0" VerticalAlignment="Top"/>
+        <CalendarDatePicker HorizontalAlignment="Left" Margin="307,67,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="OdaberiVozacaComboBox" PlaceholderText="Odaberi Vozaca" HorizontalAlignment="Left" Margin="537,67,0,0" VerticalAlignment="Top" Width="155"/>
+        <ComboBox x:Name="OdaberiVoziloComboBox" PlaceholderText="Odaberi Vozilo" HorizontalAlignment="Left" Margin="537,139,0,0" VerticalAlignment="Top" Width="155"/>
+        <ComboBox x:Name="OdaberiReoneComboBox" PlaceholderText="Odaberi Rejone" HorizontalAlignment="Left" Margin="77,139,0,0" VerticalAlignment="Top" Width="159"/>
+        <ListBox x:Name="ZaOdabratiListBox" HorizontalAlignment="Left" Height="417" Margin="77,220,0,0" VerticalAlignment="Top" Width="262"/>
+        <ListBox x:Name="OdabraniListBox" HorizontalAlignment="Left" Height="417" Margin="537,220,0,0" VerticalAlignment="Top" Width="262"/>
+        <CheckBox x:Name="SelectAllCheckBox" Content="Select All" HorizontalAlignment="Left" Margin="219,188,0,0" VerticalAlignment="Top" Width="82"/>
+        <Button x:Name="DesnoButton" Content="Desno" HorizontalAlignment="Left" Margin="407,376,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="LijevoButton" Content="Lijevo" HorizontalAlignment="Left" Margin="407,408,0,0" VerticalAlignment="Top" Width="63"/>
+        <Button x:Name="CancelButton" Content="Cancel" HorizontalAlignment="Left" Margin="848,656,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="KreirajDostavuButton" Content="Kreiraj Dostavu" HorizontalAlignment="Left" Margin="949,656,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Page>
