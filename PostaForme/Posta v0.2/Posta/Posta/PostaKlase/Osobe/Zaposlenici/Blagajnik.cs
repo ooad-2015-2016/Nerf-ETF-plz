@@ -8,23 +8,11 @@ using System.Threading.Tasks;
 
 namespace Posta
 {
-    class Blagajnik : Osoba, IZaposlenici
+    public class Blagajnik : Zaposlenik
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int BlagajnikId { get; set; }
-        public DateTime? datumZaposljenja { get; set; }
-        public int? telefon { get; set; }
-        public string email { get; set; }
-        public string adresa { get; set; }
-
         public Blagajnik() { }
-        public Blagajnik(string ime, string prezime, DateTime datumRodjenja, DateTime datumZaposljenja, int telefon, string email, string adresa) : base(ime,prezime,datumRodjenja)
-        {
-            this.datumZaposljenja = datumZaposljenja;
-            this.email = email;
-            this.telefon = telefon;
-            this.adresa = adresa;
-        }
+        public Blagajnik(string ime, string prezime, string username, string password, DateTime datumRodjenja, DateTime datumZaposljenja, string email, string brojTelefona, string adresa) : base(ime, prezime, username, password, datumRodjenja, datumZaposljenja, email, brojTelefona, adresa) { }
+
 
     }
 }

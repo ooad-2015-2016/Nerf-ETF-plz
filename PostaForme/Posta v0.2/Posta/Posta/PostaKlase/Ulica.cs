@@ -5,18 +5,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Posta
+namespace Posta.PostaKlase
 {
-    public class Posiljalac
+    public class Ulica
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int posiljalacId { get; set; }
-        public string brojTelefona { get; set; }
+        public int ulicaId { get; set; }
+        public string naziv { get; set; }
 
-        public Posiljalac() { }
-        public Posiljalac(string brojTelefona)
+        public Ulica() { }
+        public Ulica(string naziv)
         {
-            this.brojTelefona = brojTelefona;
+            this.naziv = naziv;
         }
     }
 }

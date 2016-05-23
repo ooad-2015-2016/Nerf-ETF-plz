@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Posta.PostaKlase.Zaposlenici
 {
-    interface IZaposlenici
+    public interface IZaposlenici
     {
     }
 }

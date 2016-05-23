@@ -7,17 +7,17 @@ using System.Threading.Tasks;
 
 namespace Posta
 {
-    class Primalac : Osoba
+    public class Primalac
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int primalacId { get; set; }
-        public int? telefon { get; set; }
+        public string brojTelefona { get; set; }
         public string adresa { get; set; }
 
         public Primalac() { }
-        public Primalac(string ime, string prezime, DateTime datumRodjenja,int telefon, string adresa) : base(ime,prezime,datumRodjenja)
+        public Primalac(string brojTelefona, string adresa)
         {
-            this.telefon = telefon;
+            this.brojTelefona = brojTelefona;
             this.adresa = adresa;
         }
     }

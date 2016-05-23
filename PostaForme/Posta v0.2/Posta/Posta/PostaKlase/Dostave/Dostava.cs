@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Posta.PostaKlase;
+using Posta.PostaKlase.Dostave;
+using Posta.PostaKlase.Osobe.Zaposlenici;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
@@ -7,24 +10,24 @@ using System.Threading.Tasks;
 
 namespace Posta
 {
-    class Dostava
+    public class Dostava
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int DostavaId { get; set; }
-        public List<Posiljka> listaPosiljaka { get; set; }
-        public List<bool> listaStatusa { get; set; }
-        public Postar dostavljac { get; set; }
+        public List<Posiljka> posiljke { get; set; }
+        public Dostavljac dostavljac { get; set; }
         public Poslovodja poslovodja { get; set; }
+        public Vozilo vozilo {get;set;}
         public DateTime? datumIzdavanja { get; set; }
 
         public Dostava() { }
-        public Dostava(List<Posiljka> listaPosiljaka, List<bool> listaStatusa, Postar dostavljac, Poslovodja poslovodja, DateTime datumIzdavanja)
+        public Dostava(List<Posiljka> posiljke, Dostavljac dostavljac, Poslovodja poslovodja, DateTime datumIzdavanja, Vozilo vozilo)
         {
-            this.listaPosiljaka = listaPosiljaka;
-            this.listaStatusa = listaStatusa;
+            this.posiljke = posiljke;
             this.dostavljac = dostavljac;
             this.poslovodja = poslovodja;
             this.datumIzdavanja = datumIzdavanja;
+            this.vozilo = vozilo;
         }
     }
 }

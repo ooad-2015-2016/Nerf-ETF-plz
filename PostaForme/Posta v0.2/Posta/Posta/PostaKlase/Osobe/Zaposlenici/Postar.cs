@@ -1,4 +1,5 @@
-﻿using Posta.PostaKlase.Zaposlenici;
+﻿using Posta.PostaKlase.Osobe.Zaposlenici;
+using Posta.PostaKlase.Zaposlenici;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -8,23 +9,11 @@ using System.Threading.Tasks;
 
 namespace Posta
 {
-    class Postar : Osoba, IZaposlenici
+    public class Postar : Dostavljac
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int PostarId { get; set; }
-        public DateTime? datumZaposljenja { get; set; }
-        public int? telefon { get; set; }
-        public string email { get; set; }
-        public string adresa { get; set; }
-
         public Postar() { }
-        public Postar(string ime, string prezime, DateTime datumRodjenja, DateTime datumZaposljenja, int telefon, string email, string adresa) : base(ime,prezime,datumRodjenja)
-        {
-            this.datumZaposljenja = datumZaposljenja;
-            this.email = email;
-            this.telefon = telefon;
-            this.adresa = adresa;
-        }
+        public Postar(string ime, string prezime, string username, string password, DateTime datumRodjenja, DateTime datumZaposljenja, string email, string brojTelefona, string adresa) : base(ime, prezime, username, password, datumRodjenja, datumZaposljenja, email, brojTelefona, adresa) { }
+
 
     }
 }

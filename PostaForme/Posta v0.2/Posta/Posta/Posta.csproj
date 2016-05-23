@@ -99,23 +99,28 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\20160427173040_InitialMigration.cs" />
-    <Compile Include="Migrations\20160427173040_InitialMigration.designer.cs">
-      <DependentUpon>20160427173040_InitialMigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\PostaDbContextModelSnapshot.cs" />
-    <Compile Include="PostaBaza\Models\DefaultPodaci.cs" />
-    <Compile Include="PostaBaza\Models\Posta.cs" />
-    <Compile Include="PostaBaza\Models\PostaDbContext.cs" />
+    <Compile Include="PostaKlase\Dostave\Posiljke\Letci.cs" />
+    <Compile Include="PostaKlase\Dostave\Posiljke\Paket.cs" />
+    <Compile Include="PostaKlase\Dostave\Posiljke\Pismo.cs" />
+    <Compile Include="PostaKlase\Dostave\Posiljke\Posiljka.cs" />
+    <Compile Include="PostaKlase\Izvjestaj.cs" />
+    <Compile Include="PostaKlase\Osobe\Musterije\PosiljalacFirma.cs" />
+    <Compile Include="PostaKlase\Osobe\Musterije\PosiljalacOsoba.cs" />
+    <Compile Include="PostaKlase\Osobe\Musterije\PrimalacFirma.cs" />
+    <Compile Include="PostaKlase\Osobe\Musterije\PrimalacOsoba.cs" />
     <Compile Include="PostaKlase\Osobe\Zaposlenici\Blagajnik.cs" />
     <Compile Include="PostaKlase\Dostave\Dostava.cs" />
-    <Compile Include="PostaKlase\Osobe\Osoba.cs" />
+    <Compile Include="PostaKlase\Osobe\Zaposlenici\Dostavljac.cs" />
+    <Compile Include="PostaKlase\Osobe\Zaposlenici\Zaposlenik.cs" />
     <Compile Include="PostaKlase\Osobe\Musterije\Posiljalac.cs" />
-    <Compile Include="PostaKlase\Dostave\Posiljke\Posiljka.cs" />
     <Compile Include="PostaKlase\Osobe\Zaposlenici\IZaposlenici.cs" />
     <Compile Include="PostaKlase\Osobe\Zaposlenici\Poslovodja.cs" />
     <Compile Include="PostaKlase\Osobe\Zaposlenici\Postar.cs" />
     <Compile Include="PostaKlase\Osobe\Musterije\Primalac.cs" />
+    <Compile Include="PostaKlase\Posta.cs" />
+    <Compile Include="PostaKlase\Rejon.cs" />
+    <Compile Include="PostaKlase\Ulica.cs" />
+    <Compile Include="PostaKlase\Vozilo.cs" />
     <Compile Include="PostaViews\KurirViews\KurirLetci.xaml.cs">
       <DependentUpon>KurirLetci.xaml</DependentUpon>
     </Compile>
@@ -145,7 +150,6 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PostaKlase\Osobe\Zaposlenici\Vozac.cs" />
-    <Compile Include="PostaKlase\Dostave\Posiljke\VrstaPosiljke.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -170,6 +174,7 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="PostaBaza\Models\" />
     <Folder Include="PostaBaza\Views\" />
   </ItemGroup>
   <ItemGroup>
