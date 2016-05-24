@@ -9,8 +9,7 @@ namespace Posta.PostaKlase.Dostave.Posiljke
 {
     public class Paket : Posiljka
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int PosiljkaId { get; set; }
+//        public int PaketId { get; set; }
         public Primalac primalac { get; set; }
         public double? masa { get; set; }
         public double? volumen { get; set; }

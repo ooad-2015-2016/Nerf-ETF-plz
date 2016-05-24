@@ -5,20 +5,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Posta.PostaKlase
+namespace Posta.PostaBaza.Models
 {
-    public class Vozilo
+    public class VoziloDB
     {
-        
-        //public int voziloId { get; set; }
+
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int ID { get; set; }
         public string model { get; set; }
         public string marka { get; set; }
         public string boja { get; set; }
-        public DateTime godinaProizvodnje { get; set; }
+        public DateTime? godinaProizvodnje { get; set; }
         public double volumen { get; set; }
 
-        public Vozilo() { }
-        public Vozilo(string marka, string model, string boja, DateTime godinaProizvodnje, double volumen)
+        public virtual ICollection<DostavaDB> dostave { get; set; }
+        
+
+        public VoziloDB() { }
+        public VoziloDB(string marka, string model, string boja, DateTime godinaProizvodnje, double volumen)
         {
             this.marka = marka;
             this.model = model;

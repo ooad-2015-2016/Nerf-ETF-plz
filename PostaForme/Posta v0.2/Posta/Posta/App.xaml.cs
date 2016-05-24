@@ -1,4 +1,5 @@
 ﻿using Microsoft.Data.Entity;
+using Posta.PostaBaza.Models;
 using Posta.PostaViews.KurirViews;
 using Posta.PostaViews.PoslovodjaViews;
 using Posta.PostaViews.VozacViews;
@@ -37,12 +38,12 @@ namespace Posta
                 Microsoft.ApplicationInsights.WindowsCollectors.Session);
             this.InitializeComponent();
             this.Suspending += OnSuspending;
-         /*   using (var db = new PostaDbContext())
+            using (var db = new PostaDBContext())
             {
                 db.Database.ApplyMigrations();
-                DefaultPodaci.Initialize(db);
+                //DefaultPodaci.Initialize(db);
             }
-            */
+            
         }
 
         /// <summary>

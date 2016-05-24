@@ -9,8 +9,8 @@ namespace Posta.PostaKlase
 {
     public class Rejon
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int rejonId { get; set; }
+       
+       // public int rejonId { get; set; }
         public string naziv { get; set; }
 
         public Rejon() { }

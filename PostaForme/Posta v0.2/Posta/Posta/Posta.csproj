@@ -99,6 +99,25 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20160524041646_InitialMigration.cs" />
+    <Compile Include="Migrations\20160524041646_InitialMigration.designer.cs">
+      <DependentUpon>20160524041646_InitialMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\PostaDBContextModelSnapshot.cs" />
+    <Compile Include="PostaBaza\Models\DefaultPodaci.cs" />
+    <Compile Include="PostaBaza\Models\DostavaDB.cs" />
+    <Compile Include="PostaBaza\Models\LetciDB.cs" />
+    <Compile Include="PostaBaza\Models\LoginDB.cs" />
+    <Compile Include="PostaBaza\Models\PaketDB.cs" />
+    <Compile Include="PostaBaza\Models\PismoDB.cs" />
+    <Compile Include="PostaBaza\Models\PosiljalacDB.cs" />
+    <Compile Include="PostaBaza\Models\PostaDBContext.cs" />
+    <Compile Include="PostaBaza\Models\PrimalacDB.cs" />
+    <Compile Include="PostaBaza\Models\RejonDB.cs" />
+    <Compile Include="PostaBaza\Models\UlicaDB.cs" />
+    <Compile Include="PostaBaza\Models\UlicaZaLetkeDB.cs" />
+    <Compile Include="PostaBaza\Models\VoziloDB.cs" />
+    <Compile Include="PostaBaza\Models\ZaposlenikDB.cs" />
     <Compile Include="PostaKlase\Dostave\Posiljke\Letci.cs" />
     <Compile Include="PostaKlase\Dostave\Posiljke\Paket.cs" />
     <Compile Include="PostaKlase\Dostave\Posiljke\Pismo.cs" />
@@ -174,7 +193,6 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="PostaBaza\Models\" />
     <Folder Include="PostaBaza\Views\" />
   </ItemGroup>
   <ItemGroup>

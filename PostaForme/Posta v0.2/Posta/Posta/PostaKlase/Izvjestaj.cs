@@ -11,8 +11,8 @@ namespace Posta.PostaKlase
 {
     public class Izvjestaj
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int izvjestajId { get; set; }
+        //[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        //public int izvjestajId { get; set; }
         public Dostavljac dostavljac { get; set; }
         public DateTime? datumIzdavanja { get; set; }
         public Poslovodja poslovodja { get; set; }

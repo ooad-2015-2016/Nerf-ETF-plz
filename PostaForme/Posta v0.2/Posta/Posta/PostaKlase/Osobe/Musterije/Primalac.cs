@@ -9,8 +9,8 @@ namespace Posta
 {
     public class Primalac
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int primalacId { get; set; }
+        
+       // public int primalacId { get; set; }
         public string brojTelefona { get; set; }
         public string adresa { get; set; }
 

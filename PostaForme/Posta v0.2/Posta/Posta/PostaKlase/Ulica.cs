@@ -9,8 +9,8 @@ namespace Posta.PostaKlase
 {
     public class Ulica
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int ulicaId { get; set; }
+        
+        //public int ulicaId { get; set; }
         public string naziv { get; set; }
 
         public Ulica() { }

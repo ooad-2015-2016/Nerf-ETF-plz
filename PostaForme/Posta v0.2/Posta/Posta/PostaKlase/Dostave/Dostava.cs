@@ -12,8 +12,7 @@ namespace Posta
 {
     public class Dostava
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int DostavaId { get; set; }
+//        public int DostavaId { get; set; }
         public List<Posiljka> posiljke { get; set; }
         public Dostavljac dostavljac { get; set; }
         public Poslovodja poslovodja { get; set; }

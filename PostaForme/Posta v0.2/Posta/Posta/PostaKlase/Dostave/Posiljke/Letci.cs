@@ -9,8 +9,7 @@ namespace Posta.PostaKlase.Dostave.Posiljke
 {
     public class Letci : Posiljka
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int LetciId { get; set; }
+       // public int LetciId { get; set; } ovo mozda i ne treba
         public int? kolicina { get; set; }
         public List<string> ulice { get; set; }
 

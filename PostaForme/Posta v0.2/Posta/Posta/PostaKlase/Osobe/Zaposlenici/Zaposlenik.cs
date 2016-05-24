@@ -11,8 +11,7 @@ namespace Posta
     public class Zaposlenik : IZaposlenici
     {
 
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int ZaposlenikId { get; set; }
+       // public int ZaposlenikId { get; set; }
         public string ime { get; set; }
         public string prezime { get; set; }
         public string username { get; set; }

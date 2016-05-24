@@ -9,8 +9,8 @@ namespace Posta
 {
     public class Posiljalac
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int posiljalacId { get; set; }
+       
+        //public int posiljalacId { get; set; }
         public string brojTelefona { get; set; }
 
         public Posiljalac() { }
