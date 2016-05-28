@@ -99,6 +99,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="BoratTest.cs" />
     <Compile Include="Migrations\20160524041646_InitialMigration.cs" />
     <Compile Include="Migrations\20160524041646_InitialMigration.designer.cs">
       <DependentUpon>20160524041646_InitialMigration.cs</DependentUpon>
