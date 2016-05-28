@@ -37,6 +37,8 @@ namespace Posta.PostaBaza.Models
         public int blagajnikID { get; set; }
         public virtual PrimalacDB blagajnik { get; set; }
         
+        public bool? status { get; set; }
+
         public PaketDB() { }
         
     }

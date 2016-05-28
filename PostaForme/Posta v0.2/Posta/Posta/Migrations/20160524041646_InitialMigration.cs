@@ -212,7 +212,8 @@ namespace PostaMigrations
                     masa = table.Column(type: "REAL", nullable: true),
                     primalacID = table.Column(type: "INTEGER", nullable: false),
                     ulicaID = table.Column(type: "INTEGER", nullable: false),
-                    volumen = table.Column(type: "REAL", nullable: true)
+                    volumen = table.Column(type: "REAL", nullable: true),
+                    status =  table.Column(type: "BOOLEAN", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -246,7 +247,9 @@ namespace PostaMigrations
                     dostavaID = table.Column(type: "INTEGER", nullable: false),
                     krajnjiRok = table.Column(type: "TEXT", nullable: true),
                     primalacID = table.Column(type: "INTEGER", nullable: false),
+                    status = table.Column(type: "BOOLEAN", nullable: true),
                     ulicaID = table.Column(type: "INTEGER", nullable: false)
+                    
                 },
                 constraints: table =>
                 {
