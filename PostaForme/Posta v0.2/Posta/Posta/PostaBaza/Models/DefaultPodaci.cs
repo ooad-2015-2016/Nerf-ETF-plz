@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Posta.PostaBaza.Models
 {
-    class DefaultPodaci
+    public class DefaultPodaci
     {
         /*public static void Initialize(RestoranDbContext context)
         {
