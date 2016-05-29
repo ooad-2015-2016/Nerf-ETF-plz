@@ -8,16 +8,14 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <ListView x:Name="ZaDostavuListView" HorizontalAlignment="Left" Height="496" Margin="90,87,0,0" VerticalAlignment="Top" Width="280"/>
+        <ListView x:Name="ZaDostavuListView" HorizontalAlignment="Left" Height="496" Margin="90,87,0,0" VerticalAlignment="Top" Width="412"/>
         <TextBlock x:Name="NaslovTextBlock" HorizontalAlignment="Left" Margin="10,0,0,0" TextWrapping="Wrap" Text="Vozac - Izvjestaj" VerticalAlignment="Top"/>
-        <TextBlock x:Name="PodciTextBlock" HorizontalAlignment="Left" Margin="90,62,0,0" TextWrapping="Wrap" Text="Podaci o dostavi" VerticalAlignment="Top"/>
-        <CheckBox x:Name="SelectAllCheckBox" Content="Select All" HorizontalAlignment="Left" Margin="250,66,0,0" VerticalAlignment="Top"/>
-        <ListView x:Name="IsporuceneListView" HorizontalAlignment="Left" Height="496" Margin="603,87,0,0" VerticalAlignment="Top" Width="265"/>
-        <Button x:Name="IsporucenoButton" Content="Desno" HorizontalAlignment="Left" Margin="474,210,0,0" VerticalAlignment="Top" Click="IsporucenoButton_Click"/>
-        <Button x:Name="NeisporucenoButton" Content="Lijevo" HorizontalAlignment="Left" Margin="474,309,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="PosaljiIzvjestajButton" Content="Posalji izvjestaj" HorizontalAlignment="Left" Margin="603,627,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="VratiIzvjestajButton" Content="Vrati Izvjestaj" HorizontalAlignment="Left" Margin="803,627,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="IdiNaMapuButton" Content="Idi na mapu" HorizontalAlignment="Left" Margin="474,678,0,0" VerticalAlignment="Top"/>
+        <TextBlock x:Name="PodciTextBlock" HorizontalAlignment="Left" Margin="90,58,0,0" TextWrapping="Wrap" Text="Podaci o dostavi" VerticalAlignment="Top"/>
+        <CheckBox x:Name="SelectAllCheckBox" Content="Select All" HorizontalAlignment="Left" Margin="250,52,0,0" VerticalAlignment="Top"/>
+        <ListView x:Name="IsporuceneListView" HorizontalAlignment="Left" Height="496" Margin="828,87,0,0" VerticalAlignment="Top" Width="388"/>
+        <Button x:Name="IsporucenoButton" Content="&gt;" HorizontalAlignment="Left" Margin="598,209,0,0" VerticalAlignment="Top" Click="IsporucenoButton_Click" Width="117"/>
+        <Button x:Name="NeisporucenoButton" Content="&lt;" HorizontalAlignment="Left" Margin="598,308,0,0" VerticalAlignment="Top" Click="NeisporucenoButton_Click" Width="117"/>
+        <Button x:Name="button" Content="Snimi" HorizontalAlignment="Left" Margin="628,551,0,0" VerticalAlignment="Top" Click="button_Click"/>
 
     </Grid>
 </Page>
