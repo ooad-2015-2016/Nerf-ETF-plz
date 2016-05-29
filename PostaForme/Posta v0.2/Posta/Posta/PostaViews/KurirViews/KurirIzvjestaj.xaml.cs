@@ -27,20 +27,44 @@ namespace Posta.PostaViews.KurirViews
         {
             this.InitializeComponent();
             using (var context = new PostaDBContext())
-            {
-                var log = context.login.Where(x => x.username == "kurax2").FirstOrDefault();
-                
-                
-       
-                ZaDostavuListView.Items.Add(log);
+            {                
+                var InitList = context.login.ToList();
+                foreach (var o in InitList)
+                {
+                    ZaDostavuListView.Items.Add(o);
+                }
             }
-
-
         }
 
         private void IsporucenoButton_Click(object sender, RoutedEventArgs e)
         {
-            IsporuceneListView.Items.Add(ZaDostavuListView.SelectedItem);
+            if(SelectAllCheckBox.IsChecked == true)
+            {
+                foreach(var o in ZaDostavuListView.Items)
+                {
+                    IsporuceneListView.Items.Add(o);
+                    ZaDostavuListView.Items.Remove(o);
+                }
+            }
+            else if (ZaDostavuListView.SelectedIndex != -1)
+            {
+                IsporuceneListView.Items.Add(ZaDostavuListView.SelectedItem);
+                ZaDostavuListView.Items.Remove(ZaDostavuListView.SelectedItem);
+            }
+        }
+
+        private void NeisporucenoButton_Click(object sender, RoutedEventArgs e)
+        {
+            if(IsporuceneListView.SelectedIndex != -1)
+            {
+                ZaDostavuListView.Items.Add(IsporuceneListView.SelectedItem);
+                IsporuceneListView.Items.Remove(IsporuceneListView.SelectedItem);
+            }
+        }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
