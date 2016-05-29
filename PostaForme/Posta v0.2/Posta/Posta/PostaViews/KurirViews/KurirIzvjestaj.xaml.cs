@@ -28,8 +28,8 @@ namespace Posta.PostaViews.KurirViews
             this.InitializeComponent();
             using (var context = new PostaDBContext())
             {
-
-                ZaDostavuListView.ItemsSource = context.login;
+                var log = context.login.Where(x => x.username == "kurax2");
+                ZaDostavuListView.Items.Add(log);
             }
 
 
