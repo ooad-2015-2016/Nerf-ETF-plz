@@ -11,18 +11,18 @@ namespace Posta.PostaBaza.Models
 {
     public class PostaDBContext : DbContext
     {
-        DbSet<ZaposlenikDB> zaposlenici { get; set; }
-        DbSet<VoziloDB> vozila { get; set; }
-        DbSet<PosiljalacDB> posiljaoci { get; set; }
-        DbSet<PrimalacDB> primaoci { get; set; }
-        DbSet<LoginDB> login { get; set; }
-        DbSet<UlicaDB> ulice { get; set; }
-        DbSet<RejonDB> rejoni { get; set; }
-        DbSet<PaketDB> paketi { get; set; }
-        DbSet<PismoDB> pisma { get; set; }
-        DbSet<LetciDB> letci { get; set; }
-        DbSet<UlicaZaLetkeDB> uliceZaLetke { get; set; }
-        DbSet<DostavaDB> dostave { get; set; }
+        public DbSet<ZaposlenikDB> zaposlenici { get; set; }
+        public DbSet<VoziloDB> vozila { get; set; }
+        public DbSet<PosiljalacDB> posiljaoci { get; set; }
+        public DbSet<PrimalacDB> primaoci { get; set; }
+        public DbSet<LoginDB> login { get; set; }
+        public DbSet<UlicaDB> ulice { get; set; }
+        public DbSet<RejonDB> rejoni { get; set; }
+        public DbSet<PaketDB> paketi { get; set; }
+        public DbSet<PismoDB> pisma { get; set; }
+        public DbSet<LetciDB> letci { get; set; }
+        public DbSet<UlicaZaLetkeDB> uliceZaLetke { get; set; }
+        public DbSet<DostavaDB> dostave { get; set; }
 
         /// ovdje fali jos izvjestaji ali bilo je prekrizeno na papiru
 
