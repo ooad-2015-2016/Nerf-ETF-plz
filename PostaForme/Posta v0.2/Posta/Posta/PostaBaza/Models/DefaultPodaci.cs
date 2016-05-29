@@ -8,23 +8,31 @@ namespace Posta.PostaBaza.Models
 {
     public class DefaultPodaci
     {
-        /*public static void Initialize(RestoranDbContext context)
+        public static void Initialize(PostaDBContext context)
         {
-            if (!context.Restorani.Any())
+            if (!context.login.Any())
             {
-                context.Restorani.AddRange(
-                new Restoran()
+                context.login.AddRange(
+                new LoginDB()
                 {
-                    Naziv = "Vapiano",
-                    Telefon = "062238267",
-                    Opis = "Vapiano Kafic, pasta rizoto pizza",
-                    Rating = 1,
-                    GeoDuzina = 17.5f,
-                    GeoSirina = 12.3f,
+                    username = "test",
+                    password = "test1"
                 }
                 );
                 context.SaveChanges();
             }
-        }*/
+
+            if (!context.rejoni.Any())
+            {
+                context.rejoni.AddRange(
+                new RejonDB()
+                {
+                    naziv = "alipasino"
+
+                }
+                );
+                context.SaveChanges();
+            }
+        }
     }
 }

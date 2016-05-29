@@ -13,7 +13,7 @@
         <TextBlock x:Name="PodciTextBlock" HorizontalAlignment="Left" Margin="90,62,0,0" TextWrapping="Wrap" Text="Podaci o dostavi" VerticalAlignment="Top"/>
         <CheckBox x:Name="SelectAllCheckBox" Content="Select All" HorizontalAlignment="Left" Margin="250,66,0,0" VerticalAlignment="Top"/>
         <ListView x:Name="IsporuceneListView" HorizontalAlignment="Left" Height="496" Margin="603,87,0,0" VerticalAlignment="Top" Width="265"/>
-        <Button x:Name="IsporucenoButton" Content="Desno" HorizontalAlignment="Left" Margin="474,210,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="IsporucenoButton" Content="Desno" HorizontalAlignment="Left" Margin="474,210,0,0" VerticalAlignment="Top" Click="IsporucenoButton_Click"/>
         <Button x:Name="NeisporucenoButton" Content="Lijevo" HorizontalAlignment="Left" Margin="474,309,0,0" VerticalAlignment="Top"/>
         <Button x:Name="PosaljiIzvjestajButton" Content="Posalji izvjestaj" HorizontalAlignment="Left" Margin="603,627,0,0" VerticalAlignment="Top"/>
         <Button x:Name="VratiIzvjestajButton" Content="Vrati Izvjestaj" HorizontalAlignment="Left" Margin="803,627,0,0" VerticalAlignment="Top"/>

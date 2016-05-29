@@ -85,6 +85,8 @@ namespace PostaMigrations
 
                     b.Property<int>("primalacID");
 
+                    b.Property<bool?>("status");
+
                     b.Property<int>("ulicaID");
 
                     b.Property<double?>("volumen");
@@ -110,6 +112,8 @@ namespace PostaMigrations
                     b.Property<DateTime?>("krajnjiRok");
 
                     b.Property<int>("primalacID");
+
+                    b.Property<bool?>("status");
 
                     b.Property<int>("ulicaID");
 
@@ -140,8 +144,6 @@ namespace PostaMigrations
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd();
-
-                    b.Property<int?>("LoginDBID");
 
                     b.Property<string>("adresa");
 
@@ -217,7 +219,7 @@ namespace PostaMigrations
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<int>("LoginDBID");
+                    b.Property<int>("LoginID");
 
                     b.Property<string>("adresa");
 
@@ -316,13 +318,6 @@ namespace PostaMigrations
                         .ForeignKey("ulicaID");
                 });
 
-            builder.Entity("Posta.PostaBaza.Models.PrimalacDB", b =>
-                {
-                    b.Reference("Posta.PostaBaza.Models.LoginDB")
-                        .InverseCollection()
-                        .ForeignKey("LoginDBID");
-                });
-
             builder.Entity("Posta.PostaBaza.Models.UlicaDB", b =>
                 {
                     b.Reference("Posta.PostaBaza.Models.RejonDB")
@@ -345,7 +340,7 @@ namespace PostaMigrations
                 {
                     b.Reference("Posta.PostaBaza.Models.LoginDB")
                         .InverseCollection()
-                        .ForeignKey("LoginDBID");
+                        .ForeignKey("LoginID");
                 });
         }
     }

@@ -10,7 +10,7 @@ namespace PostaMigrations
         public override void Up(MigrationBuilder migration)
         {
             migration.CreateTable(
-                name: "Login",
+                name: "LoginDB",
                 columns: table => new
                 {
                     ID = table.Column(type: "INTEGER", nullable: false),
@@ -20,14 +20,14 @@ namespace PostaMigrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Login", x => x.ID);
+                    table.PrimaryKey("PK_LoginDB", x => x.ID);
                 });
             migration.CreateTable(
-                name: "Posiljaoaci",
+                name: "PosiljalacDB",
                 columns: table => new
                 {
                     ID = table.Column(type: "INTEGER", nullable: false),
-                        //.Annotation("Sqlite:Autoincrement", true),
+                    //.Annotation("Sqlite:Autoincrement", true),
                     brojTelefona = table.Column(type: "TEXT", nullable: true),
                     ime = table.Column(type: "TEXT", nullable: true),
                     naziv = table.Column(type: "TEXT", nullable: true),
@@ -37,22 +37,38 @@ namespace PostaMigrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Posiljalac", x => x.ID);
+                    table.PrimaryKey("PK_PosiljalacDB", x => x.ID);
                 });
             migration.CreateTable(
-                name: "Rejoni",
+                name: "PrimalacDB",
                 columns: table => new
                 {
                     ID = table.Column(type: "INTEGER", nullable: false),
-                       // .Annotation("Sqlite:Autoincrement", true),
+                        //.Annotation("Sqlite:Autoincrement", true),
+                    adresa = table.Column(type: "TEXT", nullable: true),
+                    brojTelefona = table.Column(type: "TEXT", nullable: true),
+                    ime = table.Column(type: "TEXT", nullable: true),
+                    naziv = table.Column(type: "TEXT", nullable: true),
+                    prezime = table.Column(type: "TEXT", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_PrimalacDB", x => x.ID);
+                });
+            migration.CreateTable(
+                name: "RejonDB",
+                columns: table => new
+                {
+                    ID = table.Column(type: "INTEGER", nullable: false),
+                        //.Annotation("Sqlite:Autoincrement", true),
                     naziv = table.Column(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Rejon", x => x.ID);
+                    table.PrimaryKey("PK_RejonDB", x => x.ID);
                 });
             migration.CreateTable(
-                name: "Vozila",
+                name: "VoziloDB",
                 columns: table => new
                 {
                     ID = table.Column(type: "INTEGER", nullable: false),
@@ -65,28 +81,10 @@ namespace PostaMigrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Vozilo", x => x.ID);
+                    table.PrimaryKey("PK_VoziloDB", x => x.ID);
                 });
             migration.CreateTable(
-                name: "Primaoci",
-                columns: table => new
-                {
-                    ID = table.Column(type: "INTEGER", nullable: false),
-                       // .Annotation("Sqlite:Autoincrement", true),
-                    
-                    adresa = table.Column(type: "TEXT", nullable: true),
-                    brojTelefona = table.Column(type: "TEXT", nullable: true),
-                    ime = table.Column(type: "TEXT", nullable: true),
-                    naziv = table.Column(type: "TEXT", nullable: true),
-                    prezime = table.Column(type: "TEXT", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Primalac", x => x.ID);
-                    
-                });
-            migration.CreateTable(
-                name: "Zaposlenici",
+                name: "ZaposlenikDB",
                 columns: table => new
                 {
                     ID = table.Column(type: "INTEGER", nullable: false),
@@ -106,37 +104,38 @@ namespace PostaMigrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Zaposlenik", x => x.ID);
+                    table.PrimaryKey("PK_ZaposlenikDB", x => x.ID);
                     table.ForeignKey(
-                        name: "FK_Zaposlenik_Login_LoginID",
+                        name: "FK_ZaposlenikDB_LoginDB_LoginID",
                         columns: x => x.LoginID,
-                        referencedTable: "Login",
+                        referencedTable: "LoginDB",
                         referencedColumn: "ID");
                 });
             migration.CreateTable(
-                name: "Ulice",
+                name: "UlicaDB",
                 columns: table => new
                 {
                     ID = table.Column(type: "INTEGER", nullable: false),
-                        //.Annotation("Sqlite:Autoincrement", true),
+                     //   .Annotation("Sqlite:Autoincrement", true),
                     naziv = table.Column(type: "TEXT", nullable: true),
                     rejonID = table.Column(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Ulica", x => x.ID);
+                    table.PrimaryKey("PK_UlicaDB", x => x.ID);
                     table.ForeignKey(
-                        name: "FK_Ulica_Rejon_rejonID",
+                        name: "FK_UlicaDB_RejonDB_rejonID",
                         columns: x => x.rejonID,
-                        referencedTable: "Rejoni",
+                        referencedTable: "RejonDB",
                         referencedColumn: "ID");
                 });
             migration.CreateTable(
-                name: "Dostave",
+                name: "DostavaDB",
                 columns: table => new
                 {
                     ID = table.Column(type: "INTEGER", nullable: false),
                        // .Annotation("Sqlite:Autoincrement", true),
+                    ZaposlenikDBID = table.Column(type: "INTEGER", nullable: true),
                     datumIzdavanja = table.Column(type: "TEXT", nullable: true),
                     dostavljacID = table.Column(type: "INTEGER", nullable: false),
                     poslovodjaID = table.Column(type: "INTEGER", nullable: false),
@@ -144,35 +143,35 @@ namespace PostaMigrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Dostava", x => x.ID);
+                    table.PrimaryKey("PK_DostavaDB", x => x.ID);
                     table.ForeignKey(
-                        name: "FK_Dostava_Zaposlenik_ZaposlenikID",
-                        columns: x => x.ID,
-                        referencedTable: "Zaposlenici",
+                        name: "FK_DostavaDB_ZaposlenikDB_ZaposlenikDBID",
+                        columns: x => x.ZaposlenikDBID,
+                        referencedTable: "ZaposlenikDB",
                         referencedColumn: "ID");
                     table.ForeignKey(
-                        name: "FK_Dostava_Primalac_dostavljacID",
+                        name: "FK_DostavaDB_PrimalacDB_dostavljacID",
                         columns: x => x.dostavljacID,
-                        referencedTable: "Primaoci",
+                        referencedTable: "PrimalacDB",
                         referencedColumn: "ID");
                     table.ForeignKey(
-                        name: "FK_Dostava_Zaposlenik_poslovodjaID",
+                        name: "FK_DostavaDB_PrimalacDB_poslovodjaID",
                         columns: x => x.poslovodjaID,
-                        referencedTable: "Zaposlenici",
+                        referencedTable: "PrimalacDB",
                         referencedColumn: "ID");
                     table.ForeignKey(
-                        name: "FK_Dostava_Vozilo_voziloID",
+                        name: "FK_DostavaDB_VoziloDB_voziloID",
                         columns: x => x.voziloID,
-                        referencedTable: "Vozila",
+                        referencedTable: "VoziloDB",
                         referencedColumn: "ID");
                 });
             migration.CreateTable(
-                name: "Letci",
+                name: "LetciDB",
                 columns: table => new
                 {
                     ID = table.Column(type: "INTEGER", nullable: false),
-                        //.Annotation("Sqlite:Autoincrement", true),
-                    zaposlenikID = table.Column(type: "INTEGER", nullable: true),
+                       // .Annotation("Sqlite:Autoincrement", true),
+                    ZaposlenikDBID = table.Column(type: "INTEGER", nullable: true),
                     blagajnikID = table.Column(type: "INTEGER", nullable: false),
                     dostavaID = table.Column(type: "INTEGER", nullable: false),
                     kolicina = table.Column(type: "INTEGER", nullable: true),
@@ -181,135 +180,146 @@ namespace PostaMigrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Letci", x => x.ID);
+                    table.PrimaryKey("PK_LetciDB", x => x.ID);
                     table.ForeignKey(
-                        name: "FK_Letci_Zaposlenik_ZaposlenikID",
-                        columns: x => x.zaposlenikID,
-                        referencedTable: "Zaposlenici",
+                        name: "FK_LetciDB_ZaposlenikDB_ZaposlenikDBID",
+                        columns: x => x.ZaposlenikDBID,
+                        referencedTable: "ZaposlenikDB",
                         referencedColumn: "ID");
                     table.ForeignKey(
-                        name: "FK_Letci_Zaposlenik_blagajnikID",
+                        name: "FK_LetciDB_PrimalacDB_blagajnikID",
                         columns: x => x.blagajnikID,
-                        referencedTable: "Zaposlenici",
+                        referencedTable: "PrimalacDB",
                         referencedColumn: "ID");
                     table.ForeignKey(
-                        name: "FK_Letci_Dostava_dostavaID",
+                        name: "FK_LetciDB_DostavaDB_dostavaID",
                         columns: x => x.dostavaID,
-                        referencedTable: "Dostave",
+                        referencedTable: "DostavaDB",
                         referencedColumn: "ID");
                 });
             migration.CreateTable(
-                name: "Paketi",
+                name: "PaketDB",
                 columns: table => new
                 {
                     ID = table.Column(type: "INTEGER", nullable: false),
-                       // .Annotation("Sqlite:Autoincrement", true),
-                    posiljalacID = table.Column(type: "INTEGER", nullable: false),
+                    //    .Annotation("Sqlite:Autoincrement", true),
+                    PosiljalacID = table.Column(type: "INTEGER", nullable: false),
+                    ZaposlenikDBID = table.Column(type: "INTEGER", nullable: true),
                     blagajnikID = table.Column(type: "INTEGER", nullable: false),
                     broj = table.Column(type: "INTEGER", nullable: true),
                     dostavaID = table.Column(type: "INTEGER", nullable: false),
                     krajnjiRok = table.Column(type: "TEXT", nullable: true),
                     masa = table.Column(type: "REAL", nullable: true),
                     primalacID = table.Column(type: "INTEGER", nullable: false),
+                    status = table.Column(type: "INTEGER", nullable: true),
                     ulicaID = table.Column(type: "INTEGER", nullable: false),
-                    volumen = table.Column(type: "REAL", nullable: true),
-                    status =  table.Column(type: "BOOLEAN", nullable: true)
+                    volumen = table.Column(type: "REAL", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Paket", x => x.ID);
+                    table.PrimaryKey("PK_PaketDB", x => x.ID);
                     table.ForeignKey(
-                        name: "FK_Paket_Posiljalac_posiljalacID",
-                        columns: x => x.posiljalacID,
-                        referencedTable: "Posiljalaoci",
+                        name: "FK_PaketDB_PosiljalacDB_PosiljalacID",
+                        columns: x => x.PosiljalacID,
+                        referencedTable: "PosiljalacDB",
                         referencedColumn: "ID");
                     table.ForeignKey(
-                        name: "FK_Paket_Dostava_dostavaID",
+                        name: "FK_PaketDB_ZaposlenikDB_ZaposlenikDBID",
+                        columns: x => x.ZaposlenikDBID,
+                        referencedTable: "ZaposlenikDB",
+                        referencedColumn: "ID");
+                    table.ForeignKey(
+                        name: "FK_PaketDB_DostavaDB_dostavaID",
                         columns: x => x.dostavaID,
-                        referencedTable: "Dostave",
+                        referencedTable: "DostavaDB",
                         referencedColumn: "ID");
                     table.ForeignKey(
-                        name: "FK_Paket_Ulica_ulicaID",
+                        name: "FK_PaketDB_UlicaDB_ulicaID",
                         columns: x => x.ulicaID,
-                        referencedTable: "Ulice",
+                        referencedTable: "UlicaDB",
                         referencedColumn: "ID");
                 });
             migration.CreateTable(
-                name: "Pisma",
+                name: "PismoDB",
                 columns: table => new
                 {
                     ID = table.Column(type: "INTEGER", nullable: false),
-                        //.Annotation("Sqlite:Autoincrement", true),
+                     //   .Annotation("Sqlite:Autoincrement", true),
                     PosiljalacID = table.Column(type: "INTEGER", nullable: false),
-                    
+                    ZaposlenikDBID = table.Column(type: "INTEGER", nullable: true),
                     blagajnikID = table.Column(type: "INTEGER", nullable: false),
                     broj = table.Column(type: "INTEGER", nullable: true),
                     dostavaID = table.Column(type: "INTEGER", nullable: false),
                     krajnjiRok = table.Column(type: "TEXT", nullable: true),
                     primalacID = table.Column(type: "INTEGER", nullable: false),
-                    status = table.Column(type: "BOOLEAN", nullable: true),
+                    status = table.Column(type: "INTEGER", nullable: true),
                     ulicaID = table.Column(type: "INTEGER", nullable: false)
-                    
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Pismo", x => x.ID);
+                    table.PrimaryKey("PK_PismoDB", x => x.ID);
                     table.ForeignKey(
-                        name: "FK_Pismo_Posiljalac_PosiljalacID",
+                        name: "FK_PismoDB_PosiljalacDB_PosiljalacID",
                         columns: x => x.PosiljalacID,
-                        referencedTable: "Posiljaoci",
+                        referencedTable: "PosiljalacDB",
                         referencedColumn: "ID");
                     table.ForeignKey(
-                        name: "FK_Pismo_Dostava_dostavaID",
+                        name: "FK_PismoDB_ZaposlenikDB_ZaposlenikDBID",
+                        columns: x => x.ZaposlenikDBID,
+                        referencedTable: "ZaposlenikDB",
+                        referencedColumn: "ID");
+                    table.ForeignKey(
+                        name: "FK_PismoDB_DostavaDB_dostavaID",
                         columns: x => x.dostavaID,
-                        referencedTable: "Dostave",
+                        referencedTable: "DostavaDB",
                         referencedColumn: "ID");
                     table.ForeignKey(
-                        name: "FK_Pismo_Ulica_ulicaID",
+                        name: "FK_PismoDB_UlicaDB_ulicaID",
                         columns: x => x.ulicaID,
-                        referencedTable: "Ulice",
+                        referencedTable: "UlicaDB",
                         referencedColumn: "ID");
                 });
             migration.CreateTable(
-                name: "UlicaZaLetke",
+                name: "UlicaZaLetkeDB",
                 columns: table => new
                 {
                     ID = table.Column(type: "INTEGER", nullable: false),
-                        //.Annotation("Sqlite:Autoincrement", true),
+                    //    .Annotation("Sqlite:Autoincrement", true),
+                    letakID = table.Column(type: "INTEGER", nullable: false),
                     letciID = table.Column(type: "INTEGER", nullable: true),
                     status = table.Column(type: "INTEGER", nullable: true),
                     ulicaID = table.Column(type: "INTEGER", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_UlicaZaLetke", x => x.ID);
+                    table.PrimaryKey("PK_UlicaZaLetkeDB", x => x.ID);
                     table.ForeignKey(
-                        name: "FK_UlicaZaLetke_Letci_letciID",
+                        name: "FK_UlicaZaLetkeDB_LetciDB_letciID",
                         columns: x => x.letciID,
-                        referencedTable: "Letci",
+                        referencedTable: "LetciDB",
                         referencedColumn: "ID");
                     table.ForeignKey(
-                        name: "FK_UlicaZaLetke_Ulica_ulicaID",
+                        name: "FK_UlicaZaLetkeDB_UlicaDB_ulicaID",
                         columns: x => x.ulicaID,
-                        referencedTable: "Ulice",
+                        referencedTable: "UlicaDB",
                         referencedColumn: "ID");
                 });
         }
 
         public override void Down(MigrationBuilder migration)
         {
-            migration.DropTable("Paketi");
-            migration.DropTable("Pisma");
-            migration.DropTable("UlicaZaLetke");
-            migration.DropTable("Posiljaoci");
-            migration.DropTable("Letci");
-            migration.DropTable("Ulice");
-            migration.DropTable("Dostave");
-            migration.DropTable("Rejoni");
-            migration.DropTable("Zaposlenici");
-            migration.DropTable("Primaoci");
-            migration.DropTable("Vozila");
-            migration.DropTable("Login");
+            migration.DropTable("PaketDB");
+            migration.DropTable("PismoDB");
+            migration.DropTable("UlicaZaLetkeDB");
+            migration.DropTable("PosiljalacDB");
+            migration.DropTable("LetciDB");
+            migration.DropTable("UlicaDB");
+            migration.DropTable("DostavaDB");
+            migration.DropTable("RejonDB");
+            migration.DropTable("ZaposlenikDB");
+            migration.DropTable("PrimalacDB");
+            migration.DropTable("VoziloDB");
+            migration.DropTable("LoginDB");
         }
     }
 }

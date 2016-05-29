@@ -41,7 +41,7 @@ namespace Posta
             using (var db = new PostaDBContext())
             {
                 db.Database.ApplyMigrations();
-                //DefaultPodaci.Initialize(db);
+                DefaultPodaci.Initialize(db);
             }
             
         }

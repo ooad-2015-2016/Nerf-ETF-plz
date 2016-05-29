@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Posta.PostaBaza.Models;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -25,6 +26,18 @@ namespace Posta.PostaViews.KurirViews
         public KurirIzvjestaj()
         {
             this.InitializeComponent();
+            using (var context = new PostaDBContext())
+            {
+                var log = context.login.Where(x => x.username == "kurax2");
+                ZaDostavuListView.Items.Add(log);
+            }
+
+
+        }
+
+        private void IsporucenoButton_Click(object sender, RoutedEventArgs e)
+        {
+            IsporuceneListView.Items.Add(ZaDostavuListView.SelectedItem);
         }
     }
 }
