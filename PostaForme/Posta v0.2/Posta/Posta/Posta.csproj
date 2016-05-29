@@ -194,6 +194,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="PostaBaza\Views\" />
+    <Folder Include="PostaViews\Blagajnik Views\" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="PostaViews\KurirViews\KurirLetci.xaml">
