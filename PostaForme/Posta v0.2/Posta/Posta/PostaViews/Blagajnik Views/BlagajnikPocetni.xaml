@@ -23,7 +23,7 @@
         <Button x:Name="CancelButton" Content="Cancel" HorizontalAlignment="Left" Margin="47,667,0,0" VerticalAlignment="Top" Width="80"/>
         <Button x:Name="ZavrsiButton" Content="Završeno" HorizontalAlignment="Left" Margin="299,667,0,0" VerticalAlignment="Top" Width="80"/>
         <TextBox x:Name="PopustTextBox" HorizontalAlignment="Left" Margin="47,191,0,0" TextWrapping="Wrap" PlaceholderText="Popust(%)" VerticalAlignment="Top" Width="200"/>
-        <Button x:Name="PrintajButton" Content="Printaj" HorizontalAlignment="Left" Margin="184,667,0,0" VerticalAlignment="Top" Width="80"/>
+        <Button x:Name="PrintajButton" Content="Printaj" HorizontalAlignment="Left" Margin="184,667,0,0" VerticalAlignment="Top" Width="80" Click="PrintajButton_Click"/>
 
     </Grid>
 </Page>

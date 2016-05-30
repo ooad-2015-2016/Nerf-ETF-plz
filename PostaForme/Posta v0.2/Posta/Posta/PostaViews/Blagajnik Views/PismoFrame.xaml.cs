@@ -26,5 +26,7 @@ namespace Blagajnik
         {
             this.InitializeComponent();
         }
+
+        
     }
 }
