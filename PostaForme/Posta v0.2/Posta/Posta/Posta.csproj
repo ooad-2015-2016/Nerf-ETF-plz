@@ -119,26 +119,41 @@
     <Compile Include="PostaViews\KurirViews\KurirLetci.xaml.cs">
       <DependentUpon>KurirLetci.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PostaViews\PoslovodjaViews\KreirajDostavu.xaml.cs">
-      <DependentUpon>KreirajDostavu.xaml</DependentUpon>
+    <Compile Include="PostaViews\PoslovodjaViews\Dostave\KreirajDostavuKurir.xaml.cs">
+      <DependentUpon>KreirajDostavuKurir.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PostaViews\PoslovodjaViews\KreirajDostavuLetci.xaml.cs">
-      <DependentUpon>KreirajDostavuLetci.xaml</DependentUpon>
+    <Compile Include="PostaViews\PoslovodjaViews\Dostave\KreirajDostavuVozac.xaml.cs">
+      <DependentUpon>KreirajDostavuVozac.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PostaViews\PoslovodjaViews\Dostave\ManipulacijaDostava.xaml.cs">
+      <DependentUpon>ManipulacijaDostava.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PostaViews\PoslovodjaViews\Dostave\PrikaziDostave.xaml.cs">
+      <DependentUpon>PrikaziDostave.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PostaViews\PoslovodjaViews\Izbornik.xaml.cs">
+      <DependentUpon>Izbornik.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PostaViews\PoslovodjaViews\Radnici\DodajRadnika.xaml.cs">
+      <DependentUpon>DodajRadnika.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PostaViews\PoslovodjaViews\Radnici\ManipulacijaRadnika.xaml.cs">
+      <DependentUpon>ManipulacijaRadnika.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PostaViews\PoslovodjaViews\Radnici\PrikaziRadnike.xaml.cs">
+      <DependentUpon>PrikaziRadnike.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PostaViews\PoslovodjaViews\Vozila\DodajVozilo.xaml.cs">
+      <DependentUpon>DodajVozilo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PostaViews\PoslovodjaViews\Vozila\ManipulacijaVozila.xaml.cs">
+      <DependentUpon>ManipulacijaVozila.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PostaViews\PoslovodjaViews\Vozila\PrikaziVozila.xaml.cs">
+      <DependentUpon>PrikaziVozila.xaml</DependentUpon>
     </Compile>
     <Compile Include="PostaViews\VozacViews\VozacIzvjestaj.xaml.cs">
       <DependentUpon>VozacIzvjestaj.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="PostaViews\PoslovodjaViews\AdministracijaRadnika.xaml.cs">
-      <DependentUpon>AdministracijaRadnika.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="PostaViews\PoslovodjaViews\AdministracijaVozila.xaml.cs">
-      <DependentUpon>AdministracijaVozila.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="PostaViews\PoslovodjaViews\DodajIzmijeniRadnika.xaml.cs">
-      <DependentUpon>DodajIzmijeniRadnika.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="PostaViews\PoslovodjaViews\DodajIzmijeniVozilo.xaml.cs">
-      <DependentUpon>DodajIzmijeniVozilo.xaml</DependentUpon>
     </Compile>
     <Compile Include="PostaViews\KurirViews\KurirIzvjestaj.xaml.cs">
       <DependentUpon>KurirIzvjestaj.xaml</DependentUpon>
@@ -177,33 +192,53 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="PostaViews\PoslovodjaViews\KreirajDostavu.xaml">
+    <Page Include="PostaViews\PoslovodjaViews\Dostave\KreirajDostavuKurir.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="PostaViews\PoslovodjaViews\KreirajDostavuLetci.xaml">
+    <Page Include="PostaViews\PoslovodjaViews\Dostave\KreirajDostavuVozac.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PostaViews\PoslovodjaViews\Dostave\ManipulacijaDostava.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PostaViews\PoslovodjaViews\Dostave\PrikaziDostave.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PostaViews\PoslovodjaViews\Izbornik.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PostaViews\PoslovodjaViews\Radnici\DodajRadnika.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PostaViews\PoslovodjaViews\Radnici\ManipulacijaRadnika.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PostaViews\PoslovodjaViews\Radnici\PrikaziRadnike.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PostaViews\PoslovodjaViews\Vozila\DodajVozilo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PostaViews\PoslovodjaViews\Vozila\ManipulacijaVozila.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PostaViews\PoslovodjaViews\Vozila\PrikaziVozila.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="PostaViews\VozacViews\VozacIzvjestaj.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
-    </Page>
-    <Page Include="PostaViews\PoslovodjaViews\AdministracijaRadnika.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="PostaViews\PoslovodjaViews\AdministracijaVozila.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="PostaViews\PoslovodjaViews\DodajIzmijeniRadnika.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="PostaViews\PoslovodjaViews\DodajIzmijeniVozilo.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="PostaViews\KurirViews\KurirIzvjestaj.xaml">
       <SubType>Designer</SubType>

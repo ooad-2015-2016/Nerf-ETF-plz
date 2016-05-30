@@ -15,14 +15,14 @@ using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
-namespace Posta.PostaViews.PoslovodjaViews
+namespace Posta.PostaViews.PoslovodjaViews.Radnici
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class DodajIzmijeniVozilo : Page
+    public sealed partial class PrikaziRadnike : Page
     {
-        public DodajIzmijeniVozilo()
+        public PrikaziRadnike()
         {
             this.InitializeComponent();
         }

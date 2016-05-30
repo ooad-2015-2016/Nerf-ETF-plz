@@ -1,0 +1,27 @@
+﻿<Page
+    x:Class="Posta.PostaViews.PoslovodjaViews.Radnici.DodajRadnika"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Posta.PostaViews.PoslovodjaViews.Radnici"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Height="430" Width="406">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="48,40,0,0" TextWrapping="Wrap" PlaceholderText="Ime" VerticalAlignment="Top" RenderTransformOrigin="-0.43,-0.547" Height="36" Width="202"/>
+        <TextBox x:Name="textBox_Copy" HorizontalAlignment="Left" Margin="48,81,0,0" TextWrapping="Wrap" PlaceholderText="Prezime" VerticalAlignment="Top" RenderTransformOrigin="-0.43,-0.547" Height="36" Width="202"/>
+        <TextBox x:Name="textBox_Copy1" HorizontalAlignment="Left" Margin="48,196,0,0" TextWrapping="Wrap" PlaceholderText="e-mail" VerticalAlignment="Top" RenderTransformOrigin="-0.43,-0.547" Height="36" Width="202"/>
+        <TextBox x:Name="textBox_Copy2" HorizontalAlignment="Left" Margin="48,237,0,0" TextWrapping="Wrap" PlaceholderText="Broj telefona" VerticalAlignment="Top" RenderTransformOrigin="-0.43,-0.547" Height="36" Width="202"/>
+        <TextBox x:Name="textBox_Copy4" HorizontalAlignment="Left" Margin="48,278,0,0" TextWrapping="Wrap" PlaceholderText="Adresa" VerticalAlignment="Top" RenderTransformOrigin="-0.43,-0.547" Height="36" Width="202"/>
+        <CalendarDatePicker HorizontalAlignment="Left" Margin="48,122,0,0" VerticalAlignment="Top" Width="202" PlaceholderText="Datum rodjenja"/>
+        <Button x:Name="button" Content="Dodaj" HorizontalAlignment="Left" Margin="185,390,0,0" VerticalAlignment="Top" Click="button_Click"/>
+        <Button x:Name="button_Copy" Content="Ocisti" HorizontalAlignment="Left" Margin="48,390,0,0" VerticalAlignment="Top"/>
+        <CalendarDatePicker HorizontalAlignment="Left" Margin="48,159,0,0" VerticalAlignment="Top" Width="202" PlaceholderText="Datum zaposlenja" Height="39"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="48,-4,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="44" Width="197">
+        	<Run Text="Unesite osnovne podatke o "/>
+        	<Run Text="&#x9;"/>
+        	<Run Text="radniku:"/>
+        </TextBlock>
+        <AutoSuggestBox HorizontalAlignment="Left" Margin="48,319,0,0" VerticalAlignment="Top" Width="202" PlaceholderText="Tip radnika"/>
+    </Grid>
+</Page>

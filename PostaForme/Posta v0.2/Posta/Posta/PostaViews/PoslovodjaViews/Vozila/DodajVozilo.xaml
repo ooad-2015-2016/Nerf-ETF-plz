@@ -1,0 +1,24 @@
+﻿<Page
+    x:Class="Posta.PostaViews.PoslovodjaViews.Vozila.DodajVozilo"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Posta.PostaViews.PoslovodjaViews.Vozila"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Height="430" Width="406">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="48,57,0,0" TextWrapping="Wrap" PlaceholderText="Model" VerticalAlignment="Top" RenderTransformOrigin="-0.43,-0.547" Height="36" Width="202"/>
+        <TextBox x:Name="textBox_Copy" HorizontalAlignment="Left" Margin="48,102,0,0" TextWrapping="Wrap" PlaceholderText="Marka" VerticalAlignment="Top" RenderTransformOrigin="-0.43,-0.547" Height="36" Width="202"/>
+        <TextBox x:Name="textBox_Copy1" HorizontalAlignment="Left" Margin="48,229,0,0" TextWrapping="Wrap" PlaceholderText="Boja" VerticalAlignment="Top" RenderTransformOrigin="-0.43,-0.547" Height="36" Width="202"/>
+        <TextBox x:Name="textBox_Copy2" HorizontalAlignment="Left" Margin="48,274,0,0" TextWrapping="Wrap" PlaceholderText="Volumen" VerticalAlignment="Top" RenderTransformOrigin="-0.43,-0.547" Height="36" Width="202"/>
+        <CalendarDatePicker HorizontalAlignment="Left" Margin="48,147,0,0" VerticalAlignment="Top" Width="202" PlaceholderText="Datum proizvodnje"/>
+        <Button x:Name="button" Content="Dodaj" HorizontalAlignment="Left" Margin="185,390,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="button_Copy" Content="Ocisti" HorizontalAlignment="Left" Margin="48,390,0,0" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="48,2,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="44" Width="197">
+        	<Run Text="Unesite osnovne podatke o "/>
+        	<Run Text="&#x9;"/>
+        	<Run Text="vozilu:"/>
+        </TextBlock>
+    </Grid>
+</Page>
