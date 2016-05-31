@@ -104,6 +104,7 @@
       <DependentUpon>20160529101100_InitialMigration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\PostaDBContextModelSnapshot.cs" />
+    <Compile Include="PostaBaza\DataSource.cs" />
     <Compile Include="PostaBaza\Models\DefaultPodaci.cs" />
     <Compile Include="PostaBaza\Models\DostavaDB.cs" />
     <Compile Include="PostaBaza\Models\LetciDB.cs" />
@@ -140,8 +141,14 @@
     <Compile Include="PostaKlase\Rejon.cs" />
     <Compile Include="PostaKlase\Ulica.cs" />
     <Compile Include="PostaKlase\Vozilo.cs" />
+    <Compile Include="PostaViewModels\KurirIzvjestajViewModel.cs" />
+    <Compile Include="PostaViewModels\LoginVIewModel.cs" />
+    <Compile Include="PostaViewModels\RelayCommand.cs" />
     <Compile Include="PostaViews\KurirViews\KurirLetci.xaml.cs">
       <DependentUpon>KurirLetci.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PostaViews\LoginView.xaml.cs">
+      <DependentUpon>LoginView.xaml</DependentUpon>
     </Compile>
     <Compile Include="PostaViews\PoslovodjaViews\KreirajDostavu.xaml.cs">
       <DependentUpon>KreirajDostavu.xaml</DependentUpon>
@@ -197,6 +204,10 @@
   </ItemGroup>
   <ItemGroup>
     <Page Include="PostaViews\KurirViews\KurirLetci.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PostaViews\LoginView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

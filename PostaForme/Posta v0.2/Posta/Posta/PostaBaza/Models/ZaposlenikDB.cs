@@ -53,5 +53,10 @@ namespace Posta.PostaBaza.Models
             this.adresa = adresa;
 
         }
+
+        public override string ToString()
+        {
+            return ime + " " + prezime;
+        }
     }
 }

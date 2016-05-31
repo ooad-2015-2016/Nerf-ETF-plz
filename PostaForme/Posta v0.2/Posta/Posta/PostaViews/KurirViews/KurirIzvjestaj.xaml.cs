@@ -33,6 +33,14 @@ namespace Posta.PostaViews.KurirViews
                 {
                     ZaDostavuListView.Items.Add(o);
                 }
+
+                var loginVozac = new LoginDB()
+                {
+                    username = "vozac",
+                    password = "vozac"
+                };
+                context.login.Add(loginVozac);
+                context.SaveChanges();
             }
         }
 
