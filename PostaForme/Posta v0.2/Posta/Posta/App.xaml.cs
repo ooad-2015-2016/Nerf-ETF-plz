@@ -1,5 +1,6 @@
 ﻿using Microsoft.Data.Entity;
 using Posta.PostaBaza.Models;
+using Posta.PostaViews.Blagajnik_Views;
 using Posta.PostaViews.KurirViews;
 using Posta.PostaViews.PoslovodjaViews;
 using Posta.PostaViews.VozacViews;
@@ -87,7 +88,11 @@ namespace Posta
                     // When the navigation stack isn't restored navigate to the first page,
                     // configuring the new page by passing required information as a navigation
                     // parameter
+<<<<<<< HEAD
                     rootFrame.Navigate(typeof(LoginView), null);
+=======
+                    rootFrame.Navigate(typeof(BlagajnikPocetna), e.Arguments);
+>>>>>>> origin/BenjaminBazaPodataka
                 }
                 // Ensure the current window is active
                 Window.Current.Activate();

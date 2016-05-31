@@ -1,0 +1,29 @@
+﻿<Page
+    x:Class="Posta.PostaViews.Blagajnik_Views.BlagajnikKreirajPosiljku"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Posta.PostaViews.Blagajnik_Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Width="410" Height="625.5">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="0,0,-21,-37">
+        <TextBlock x:Name="NaslovTextBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Kreiraj Posiljku" VerticalAlignment="Top"/>
+        <TextBox x:Name="NazivTextBox" HorizontalAlignment="Left" Margin="47,54,0,0" TextWrapping="Wrap" PlaceholderText="Posiljalac" VerticalAlignment="Top" Width="200"/>
+        <CalendarDatePicker x:Name="KrajnjiRokIsporukeCalenderDatePicker" HorizontalAlignment="Left" Margin="47,101,0,0" VerticalAlignment="Top" Width="200" PlaceholderText="Krajnji Rok Isporuke"/>
+        <RadioButton x:Name="PismoRadioButton" Content="Pismo" HorizontalAlignment="Left" Margin="302,70,0,0" VerticalAlignment="Top" Checked="PismoRadioButton_Checked"/>
+        <RadioButton x:Name="PaketRadioButton" Content="Paket" HorizontalAlignment="Left" Margin="302,107,0,0" VerticalAlignment="Top"  Checked="PaketRadioButton_Checked"/>
+        <RadioButton x:Name="LetciRadioButton" Content="Letci" HorizontalAlignment="Left" Margin="302,146,0,0" VerticalAlignment="Top"  Checked="LetciRadioButton_Checked"/>
+        <TextBlock x:Name="TipPosiljkeTextBlock" HorizontalAlignment="Left" Margin="302,36,0,0" TextWrapping="Wrap" Text="Tip Pošiljke:" VerticalAlignment="Top"/>
+        <TextBlock x:Name="OsnovneInformacijeTextBlock" HorizontalAlignment="Left" Margin="47,28,0,0" TextWrapping="Wrap" Text="Osnovne Informacije:" VerticalAlignment="Top"/>
+        <TextBlock x:Name="DodatneInformacijeTextBlock" HorizontalAlignment="Left" Margin="47,206,0,0" TextWrapping="Wrap" Text="Dodatne Informacije:" VerticalAlignment="Top"/>
+        <Frame x:Name="DodatneInformacijeFrame" HorizontalAlignment="Left" Margin="47,243,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Height="340" Width="332">
+
+        </Frame>
+        <Button x:Name="CancelButton" Content="Cancel" HorizontalAlignment="Left" Margin="47,616,0,0" VerticalAlignment="Top" Width="80" Click="CancelButton_Click"/>
+        <Button x:Name="ZavrsiButton" Content="Završeno" HorizontalAlignment="Left" Margin="299,616,0,0" VerticalAlignment="Top" Width="80"/>
+        <TextBox x:Name="PopustTextBox" HorizontalAlignment="Left" Margin="47,147,0,0" TextWrapping="Wrap" PlaceholderText="Popust(%)" VerticalAlignment="Top" Width="200"/>
+        <Button x:Name="PrintajButton" Content="Printaj" HorizontalAlignment="Left" Margin="167,616,0,0" VerticalAlignment="Top" Width="80" Click="PrintajButton_Click"/>
+
+    </Grid>
+</Page>

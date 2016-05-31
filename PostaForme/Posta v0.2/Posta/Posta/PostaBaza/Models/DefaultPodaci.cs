@@ -10,6 +10,8 @@ namespace Posta.PostaBaza.Models
     {
         public static void Initialize(PostaDBContext context)
         {
+
+
             if (!context.login.Any())
             {
                 context.login.AddRange(
@@ -33,6 +35,13 @@ namespace Posta.PostaBaza.Models
                 );
                 context.SaveChanges();
             }
+            
+            
+
+           
+                
+            
+            
         }
     }
 }

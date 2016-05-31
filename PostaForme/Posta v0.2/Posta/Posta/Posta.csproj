@@ -141,9 +141,27 @@
     <Compile Include="PostaKlase\Rejon.cs" />
     <Compile Include="PostaKlase\Ulica.cs" />
     <Compile Include="PostaKlase\Vozilo.cs" />
+<<<<<<< HEAD
     <Compile Include="PostaViewModels\KurirIzvjestajViewModel.cs" />
     <Compile Include="PostaViewModels\LoginVIewModel.cs" />
     <Compile Include="PostaViewModels\RelayCommand.cs" />
+=======
+    <Compile Include="PostaViews\Blagajnik Views\BlagajnikKreirajPosiljku.xaml.cs">
+      <DependentUpon>BlagajnikKreirajPosiljku.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PostaViews\Blagajnik Views\BlagajnikPocetna.xaml.cs">
+      <DependentUpon>BlagajnikPocetna.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PostaViews\Blagajnik Views\LetciFrame.xaml.cs">
+      <DependentUpon>LetciFrame.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PostaViews\Blagajnik Views\PaketFrame.xaml.cs">
+      <DependentUpon>PaketFrame.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PostaViews\Blagajnik Views\PismoFrame.xaml.cs">
+      <DependentUpon>PismoFrame.xaml</DependentUpon>
+    </Compile>
+>>>>>>> origin/BenjaminBazaPodataka
     <Compile Include="PostaViews\KurirViews\KurirLetci.xaml.cs">
       <DependentUpon>KurirLetci.xaml</DependentUpon>
     </Compile>
@@ -201,8 +219,29 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="PostaBaza\Views\" />
+    <Folder Include="PostaViewModels\" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="PostaViews\Blagajnik Views\BlagajnikKreirajPosiljku.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PostaViews\Blagajnik Views\BlagajnikPocetna.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PostaViews\Blagajnik Views\LetciFrame.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PostaViews\Blagajnik Views\PaketFrame.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PostaViews\Blagajnik Views\PismoFrame.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="PostaViews\KurirViews\KurirLetci.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
