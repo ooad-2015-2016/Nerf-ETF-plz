@@ -140,8 +140,11 @@
     <Compile Include="PostaKlase\Rejon.cs" />
     <Compile Include="PostaKlase\Ulica.cs" />
     <Compile Include="PostaKlase\Vozilo.cs" />
-    <Compile Include="PostaViews\Blagajnik Views\BlagajnikPocetni.xaml.cs">
-      <DependentUpon>BlagajnikPocetni.xaml</DependentUpon>
+    <Compile Include="PostaViews\Blagajnik Views\BlagajnikKreirajPosiljku.xaml.cs">
+      <DependentUpon>BlagajnikKreirajPosiljku.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PostaViews\Blagajnik Views\BlagajnikPocetna.xaml.cs">
+      <DependentUpon>BlagajnikPocetna.xaml</DependentUpon>
     </Compile>
     <Compile Include="PostaViews\Blagajnik Views\LetciFrame.xaml.cs">
       <DependentUpon>LetciFrame.xaml</DependentUpon>
@@ -208,9 +211,13 @@
     <Folder Include="PostaBaza\Views\" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="PostaViews\Blagajnik Views\BlagajnikPocetni.xaml">
+    <Page Include="PostaViews\Blagajnik Views\BlagajnikKreirajPosiljku.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PostaViews\Blagajnik Views\BlagajnikPocetna.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="PostaViews\Blagajnik Views\LetciFrame.xaml">
       <Generator>MSBuild:Compile</Generator>

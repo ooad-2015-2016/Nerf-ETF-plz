@@ -20,11 +20,16 @@ namespace Posta.PostaViews.Blagajnik_Views
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class PaketFrame : Page
+    public sealed partial class BlagajnikPocetna : Page
     {
-        public PaketFrame()
+        public BlagajnikPocetna()
         {
             this.InitializeComponent();
+        }
+
+        private void KreirajPosiljkuButton_Click(object sender, RoutedEventArgs e)
+        {
+            
         }
     }
 }

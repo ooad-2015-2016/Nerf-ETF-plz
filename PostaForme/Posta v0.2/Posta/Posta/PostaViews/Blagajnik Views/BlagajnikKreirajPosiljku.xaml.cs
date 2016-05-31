@@ -17,16 +17,16 @@ using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
-namespace Blagajnik
+namespace Posta.PostaViews.Blagajnik_Views
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class BlagajnikPocetni : Page
+    public sealed partial class BlagajnikKreirajPosiljku : Page
     {
 
 
-        public BlagajnikPocetni()
+        public BlagajnikKreirajPosiljku()
         {
             this.InitializeComponent();
 
