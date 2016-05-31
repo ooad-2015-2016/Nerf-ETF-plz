@@ -29,7 +29,7 @@ namespace Posta.PostaViews.Blagajnik_Views
 
         private void KreirajPosiljkuButton_Click(object sender, RoutedEventArgs e)
         {
-            
+            Frame.Navigate(typeof(BlagajnikKreirajPosiljku));
         }
     }
 }

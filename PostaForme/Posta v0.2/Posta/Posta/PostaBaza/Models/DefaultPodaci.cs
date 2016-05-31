@@ -11,18 +11,7 @@ namespace Posta.PostaBaza.Models
         public static void Initialize(PostaDBContext context)
         {
 
-            if (!context.ulice.Any())
-            {
 
-                context.ulice.AddRange(
-                    new UlicaDB()
-                    {
-                        naziv = "alipasina"
-                    }
-                    );
-                context.SaveChanges();
-            }
-/*
             if (!context.login.Any())
             {
                 context.login.AddRange(
@@ -46,7 +35,7 @@ namespace Posta.PostaBaza.Models
                 );
                 context.SaveChanges();
             }
-            */
+            
             
 
            

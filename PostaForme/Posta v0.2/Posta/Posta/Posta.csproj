@@ -209,6 +209,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="PostaBaza\Views\" />
+    <Folder Include="PostaViewModels\" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="PostaViews\Blagajnik Views\BlagajnikKreirajPosiljku.xaml">
