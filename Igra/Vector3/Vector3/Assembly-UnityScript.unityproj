@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+	<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+	<ProductVersion>10.0.20506</ProductVersion>
+	<SchemaVersion>2.0</SchemaVersion>
+	<ProjectGuid>{6CDABD6D-3E62-BE64-84BD-286D67ACC0BF}</ProjectGuid>
+	<OutputType>Library</OutputType>
+	<AppDesignerFolder>Properties</AppDesignerFolder>
+	<RootNamespace></RootNamespace>
+	<AssemblyName>Assembly-UnityScript</AssemblyName>
+	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+	<FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+	<DebugSymbols>true</DebugSymbols>
+	<DebugType>full</DebugType>
+	<Optimize>false</Optimize>
+	<OutputPath>Temp\bin\Debug\</OutputPath>
+	<DefineConstants>DEBUG;TRACE;UNITY_STANDALONE;ENABLE_MICROPHONE;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;ENABLE_AUDIO_FMOD;ENABLE_NETWORK;ENABLE_MONO;ENABLE_PHYSICS;ENABLE_TERRAIN;ENABLE_CACHING;ENABLE_SUBSTANCE;ENABLE_GENERICS;ENABLE_CLOTH;ENABLE_MOVIES;ENABLE_AUDIO;ENABLE_WWW;ENABLE_SHADOWS;ENABLE_DUCK_TYPING;UNITY_4_0_1;UNITY_4_0;UNITY_STANDALONE_WIN;ENABLE_PROFILER;UNITY_EDITOR</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+	<DebugType>pdbonly</DebugType>
+	<Optimize>true</Optimize>
+	<OutputPath>Temp\bin\Release\</OutputPath>
+	<DefineConstants>TRACE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+	<Reference Include="System" />
+    <Reference Include="System.XML" />
+	<Reference Include="System.Core" />
+	<Reference Include="UnityEngine">
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	</Reference>
+	<Reference Include="UnityEditor">
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	</Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\Opacity.js" />
+     <Compile Include="Assets\Player\AllAnim.js" />
+     <Compile Include="Assets\Player\BetterCollision.js" />
+     <Compile Include="Assets\Player\CamRotate.js" />
+     <Compile Include="Assets\Player\Catch.js" />
+     <Compile Include="Assets\Player\CharFixPhysics.js" />
+     <Compile Include="Assets\Player\Effects.js" />
+     <Compile Include="Assets\Player\FauxGravityAttractor.js" />
+     <Compile Include="Assets\Player\FauxGravityBody.js" />
+     <Compile Include="Assets\Player\Health.js" />
+     <Compile Include="Assets\Player\Invisibility.js" />
+     <Compile Include="Assets\Player\Jump.js" />
+     <Compile Include="Assets\Player\Look.js" />
+     <Compile Include="Assets\Player\Pause.js" />
+     <Compile Include="Assets\Player\Points.js" />
+     <Compile Include="Assets\Player\Position.js" />
+     <Compile Include="Assets\Player\RootPlacing.js" />
+     <Compile Include="Assets\Player\RootPlayer.js" />
+     <Compile Include="Assets\Player\StayOnPlatform.js" />
+     <Compile Include="Assets\Player\Teleport.js" />
+     <Compile Include="Assets\Player\Teleport2.js" />
+     <Compile Include="Assets\Player\Teleport3.js" />
+     <Compile Include="Assets\Player\crouch.js" />
+     <Compile Include="Assets\Player\move1.js" />
+     <Compile Include="Assets\Scripts\ApplicationExit.js" />
+     <Compile Include="Assets\Scripts\DeathLevel1.js" />
+     <Compile Include="Assets\Scripts\DeathLevel2.js" />
+     <Compile Include="Assets\Scripts\DeathLevel3.js" />
+     <Compile Include="Assets\Scripts\DeathLevel4.js" />
+     <Compile Include="Assets\Scripts\DeathLevel5.js" />
+     <Compile Include="Assets\Scripts\EndLevel.js" />
+     <Compile Include="Assets\Scripts\ExitScript.js" />
+     <Compile Include="Assets\Scripts\Hover script.js" />
+     <Compile Include="Assets\Scripts\LevelSelectBack.js" />
+     <Compile Include="Assets\Scripts\LoadLevel1.js" />
+     <Compile Include="Assets\Scripts\LoadLevel2.js" />
+     <Compile Include="Assets\Scripts\LoadLevel3.js" />
+     <Compile Include="Assets\Scripts\LoadLevel4.js" />
+     <Compile Include="Assets\Scripts\LoadLevel5.js" />
+     <Compile Include="Assets\Scripts\OptScript.js" />
+     <Compile Include="Assets\Scripts\PlayF.js" />
+     <Compile Include="Assets\Scripts\PlayScript.js" />
+     <Compile Include="Assets\Scripts\Rotate.js" />
+     <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{22FD6CB4-CC07-46BC-C2FE-14971D8A678C}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+    <ProjectReference Include="Assembly-UnityScript-firstpass.unityproj">
+      <Project>{F24D9F08-93A2-C39D-A61E-B745ED9961F8}</Project>      <Name>Assembly-UnityScript-firstpass</Name>    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+	   Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>

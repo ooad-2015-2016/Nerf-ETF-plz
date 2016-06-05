@@ -1,0 +1,3 @@
+function OnMouseUpAsButton () {
+        Application.Quit();
+    }
